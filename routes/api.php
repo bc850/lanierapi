@@ -16,11 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // testing
-Route::get('test_product', function() {
-    // If the Content-Type and Accept headers are set to 'application/json',
-    // this will return a JSON structure. This will be cleaned up later.
-    return Product::all();
-})->middleware('web');
+Route::get('/testing-the-api', function() {
+    return ["message" => "the API is working"];
+});
 
 Route::apiResource('products', 'ProductController');
 
