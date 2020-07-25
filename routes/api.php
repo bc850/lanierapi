@@ -20,6 +20,6 @@ Route::get('/testing-the-api', function() {
     return ["message" => "the API is working"];
 });
 
-Route::apiResource('products', 'ProductController');
+Route::apiResource('/products', 'ProductController');
 
-Route::get('products/featured', 'ProductController@featured_products')->name('products.featured');
+Route::get('/products/featured', 'ProductController@featured_products')->name('products.featured');
