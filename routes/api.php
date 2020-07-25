@@ -20,7 +20,7 @@ Route::get('test_product', function() {
     // If the Content-Type and Accept headers are set to 'application/json',
     // this will return a JSON structure. This will be cleaned up later.
     return Product::all();
-});
+})->middleware('web');
 
 Route::apiResource('products', 'ProductController');
 
