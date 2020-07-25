@@ -1,5 +1,6 @@
 <?php
 
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+// testing
+Route::get('test_product', function() {
+    // If the Content-Type and Accept headers are set to 'application/json',
+    // this will return a JSON structure. This will be cleaned up later.
+    return Product::all();
+});
 
 Route::apiResource('products', 'ProductController');
 
