@@ -17,9 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 // testing
 Route::get('/testing-the-api', function() {
-    return ["message" => "the API is working"];
+    return response()->json([
+        "message" => "the API is working"
+    ]);
 });
 
 Route::apiResource('/products', 'ProductController');
 
 Route::get('/products/featured', 'ProductController@featured_products')->name('products.featured');
+
+Route::fallback(function(){
+    return response()->json([
+        'message' => 'Page Not Found. If error persists, contact web@laniersupply.com'], 404);
+});
