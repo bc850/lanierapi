@@ -32,7 +32,7 @@ class Product extends Model {
         "featured"
     ];
 
-    public function isAvailble() {
+    public function isAvailable() {
         return $this->status == Product::AVAILABLE_PRODUCT;
     }
 }
