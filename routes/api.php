@@ -24,7 +24,7 @@ Route::get('/testing-the-api', function() {
 
 Route::apiResource('/products', 'ProductController');
 
-Route::get('/products/featured', 'ProductController@featured_products')->name('products.featured');
+Route::get('/featured-products', 'ProductController@featured_products')->name('products.featured');
 
 Route::fallback(function(){
     return response()->json([
