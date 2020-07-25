@@ -36,7 +36,7 @@ class CreateProductsTable extends Migration
             $table->double('on_sale_percentage', 8, 2)->default(0.0);
             $table->integer('number_of_sales')->default(0);
             $table->integer('number_of_views')->default(0);
-            $table->boolean('featured')->default('false');
+            $table->boolean('featured')->default(false);
             $table->timestamps();
         });
     }
